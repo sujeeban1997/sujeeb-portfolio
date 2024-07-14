@@ -757,7 +757,7 @@ body{
 nav.navbar.fixed-top.navbar-expand-lg.navbar-dark {
     width: 50%;
     border-radius: 50px;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 header#header {
