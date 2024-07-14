@@ -187,7 +187,7 @@ $('.scroll-up-btn').click(function(){
     });
 
 
-    /******************************************************************************
+/******************************************************************************
   Smooth moving section 
  ******************************************************************************/
 
@@ -213,7 +213,9 @@ $('.scroll-up-btn').click(function(){
 
 
     
-
+/******************************************************************************
+  Landing page animation section 
+ ******************************************************************************/
     TweenMax.from(".landing-page-animation", 2, {
         delay: 1.2,
         opacity: 0,
@@ -232,46 +234,65 @@ $('.scroll-up-btn').click(function(){
     /******************************************************************************
   Text reveal section 
  ******************************************************************************/
-    // gsap.registerPlugin(ScrollTrigger)
+   
+let typeSplit;
+// Split the text up
+function runSplit() {
+  typeSplit = new SplitType(".about-text-reveal", {
+    types: "lines, words"
+  });
+  $(".word").append("<div class='line-mask'></div>");
+  createAnimation();
+}
 
-    //     const splitTypes = document.querySelectorAll('.animation-section-sm')
+runSplit();
 
-    //     splitTypes.forEach((char,i) => {
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger);
 
-    //         const bg = char.dataset.bgColor
-    //         const fg = char.dataset.fgColor
+// Create staggered animation
+function createAnimation() {
+  let allMasks = $(".word").map(function() {
+    return $(this).find(".line-mask");
+  }).get();
 
-    //         const text = new SplitType(char, { types: 'chars'})
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".about-text-reveal",
+      start: "top 40%",
+      end: "top 10%",
+      scrub: 1,
+      toggleActions: 'play play reverse reverse'
+    }
+  });
 
-    //         gsap.fromTo(text.chars, 
-    //             {
-    //                 color: bg,
-    //             },
-    //             {
-    //                 color: fg,
-    //                 duration: 0.3,
-    //                 stagger: 0.02,
-    //                 scrollTrigger: {
-    //                     trigger: char,
-    //                     start: 'top 80%',
-    //                     end: 'top 20%',
-    //                     scrub: true,
-    //                     markers: false,
-    //                     toggleActions: 'play play reverse reverse'
-    //                 }
-    //         })
-    //     })
+  tl.to(allMasks, {
+    width: "0%",
+    duration: 0.5,
+    stagger: 0.5
+  });
+}
 
 
-    //     const lenis = new Lenis()
 
-    //     lenis.on('scroll', (e) => {
-    //     console.log(e)
-    //     })
 
-    //     function raf(time) {
-    //     lenis.raf(time)
-    //     requestAnimationFrame(raf)
-    //     }
 
-    //     requestAnimationFrame(raf)
+  /******************************************************************************
+  Text glow effect section 
+ ******************************************************************************/
+
+  var pos = document.documentElement;
+  pos.addEventListener('mousemove', e =>{
+    pos.style.setProperty('--x', e.clientX + 'px')
+    pos.style.setProperty('--y', e.clientY + 'px')
+  })
+
+
+
+  const text = document.querySelector(".circle-text");
+text.innerHTML = text.innerText
+	.split("")
+	.map(
+		(char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
+	)
+	.join("");
