@@ -14,6 +14,7 @@ html {
 
 body{
     /* overflow-x: hidden; */
+    transition: background-color 1s ease;
 }
 
 /*--------------------------------------------------------------
@@ -108,35 +109,35 @@ body{
 
 .circle {
 	position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 100vmax;
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: 3%;
+    bottom: 4%;
     right: 8%;
 }
 
 .circle-logo {
 	position: absolute;
-	width: 140px;
-	height: 140px;
-	background: url("assets/arrow-alt-circle-down.png");
+    width: 95px;
+    height: 95px;
+    background: url(assets/arrow-alt-circle-down.png);
     color: white;
-	background-size: cover;
-	border-radius: 100vmax;
-	background-position: center;
+    background-size: cover;
+    border-radius: 100vmax;
+    background-position: center;
 }
 
 .circle-text {
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	font-family: consolas;
-	color: #ffffff;
-	font-size: 14px;
-	animation: textRotation 8s linear infinite;
+    width: 100%;
+    height: 100%;
+    font-family: consolas;
+    color: #ffffff;
+    font-size: 12px;
+    animation: textRotation 8s linear infinite;
 }
 
 @keyframes textRotation {
@@ -149,7 +150,7 @@ body{
 	position: absolute;
 	left: 50%;
 	font-size: 1.2em;
-	transform-origin: 0 100px;
+	transform-origin: 0 75px;
 }
 
 #titleee {
@@ -1022,7 +1023,7 @@ section {
 }
 
 .about{
-    background: linear-gradient(180deg, #04030b 0%, #0e0e0e 100%);
+    /* background: linear-gradient(180deg, #04030b 0%, #0e0e0e 100%); */
     color: white;
 }
 
@@ -1062,24 +1063,6 @@ section {
     font-size: 18px;
 }
 
-/* .about-text-section {
-    display: inline;
-    color: hsl(0 0% 100% / 0.1);
-    background-clip: text;
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    background-image: linear-gradient(90deg, red, blue);
-    animation: about-text-section linear forwards;
-    animation-timeline: view();
-    animation-range-start: contain 30vh;
-    animation-range-end: contain 50vh;
-}
-
-@keyframes about-text-section{
-    to {
-        background-size: 100% 100%;
-    }
-} */
 .about-text-reveal{
     font-size: 32px !important;
     color: #ced2d4;
@@ -1188,6 +1171,31 @@ section {
     z-index: 400;
 }
 
+/* background change *0/
+/* panel styles */
+.panel {
+    /* min height incase content is higher than window height */
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+    /* outline: 10px solid hotpink; */
+    /* turn above on to see the edge of panels */
+  }
+  
+  /* colours */
+  .color-violet {
+    background-color: #7A4EAB;
+  }
+  .color-indigo {
+    background-color: #4332CF;
+  }
+
+  .color-black{
+    background-color: #0e0e0e;
+  }
+
 
 /*--------------------------------------------------------------
 # Service Section
@@ -1266,6 +1274,12 @@ p.section-title.white-text-bg {
     animation: aboutFade linear;
     animation-timeline: view();
     animation-range: entry 0;
+}
+
+/* service 02 */
+.service .service-tab-section .service-card-view h2{
+    font-size: 5rem;
+    line-height: 1;
 }
 
 
