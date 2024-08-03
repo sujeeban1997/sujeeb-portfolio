@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 html {
@@ -94,17 +96,48 @@ body{
 --------------------------------------------------------------*/
 
 .hero-section{
+    position: relative;
     height: 100vh;
     overflow: hidden;
-    background: radial-gradient(ellipse at bottom, #0e1d2f 0%, #000000 100%)
+    /* background: radial-gradient(ellipse at bottom, #0e1d2f 0%, #000000 100%); */
+    background: linear-gradient(360deg, rgba(4, 3, 11, 1) 0%, rgb(12 41 68) 100%);
 }
 
-.background-text{
+.header-banner-image{
+    position: absolute;
+    z-index: 9999;
+    bottom: 0rem;
+    width: 35%;
+    right: 32%;
+}
+
+@font-face {
+    font-family: 'Masiku';
+    src: 
+         url('/fonts/Masiku.woff2') format('woff2'),
+         url('/fonts/Masiku.woff') format('woff'),
+         url('/fonts/Masiku.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay-Semibold';
+    src: url('/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+         url('/fonts/ClashDisplay-Semibold.woff') format('woff'),
+         url('/fonts/ClashDisplay-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+
+.background-text {
     font-size: 12rem;
-    color: #ffffff14;
+    color: #6e7c8e;
     position: relative;
     top: 3rem;
     cursor: default;
+    font-family: 'Masiku', sans-serif;
 }
 
 .circle {
@@ -116,7 +149,7 @@ body{
     align-items: center;
     justify-content: center;
     bottom: 4%;
-    right: 8%;
+    left: 5%;
 }
 
 .circle-logo {
@@ -785,11 +818,11 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark{
 }
 
 .navbar.sticky {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     height: 3.4rem;
     transition: 0.3s;
     backdrop-filter: blur(20px);
-    background: rgb(53 53 53 / 61%);
+    background: rgb(31 34 39 / 61%);
+    border: 1px solid #1f2227;
 }
 
 .navbar .logo a {
@@ -1015,15 +1048,19 @@ section {
 
 .section-title {
     text-align: left;
-    font-family: Inter,sans-serif;
+    /* font-family: "ClashDisplay-Medium", sans-serif; */
+    /* font-family: 'ClashDisplay-Semibold'; */
+    /* font-family: "Montserrat", sans-serif; */
+    /* font-family: "Raleway", sans-serif; */
+    font-family: "Kanit", sans-serif;
     font-size: 6rem;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px;
 }
 
 .about{
-    /* background: linear-gradient(180deg, #04030b 0%, #0e0e0e 100%); */
+    background: linear-gradient(180deg, #04030b 0%, #0e0e0e 100%);
     color: white;
 }
 
@@ -1132,6 +1169,7 @@ section {
 .about p.timeline-experience{
     font-size: 1.5rem;
     font-weight: 600;
+    font-family: "Raleway", sans-serif;
 }
 
 .about .top-title-month p{
@@ -1171,17 +1209,56 @@ section {
     z-index: 400;
 }
 
-/* background change *0/
-/* panel styles */
+/* -----------------------------------------------------------------
+New about me section  
+--------------------------------------------------------------------*/
+.section-study-title{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: #ced2d4;
+    /* font-family: "Raleway", sans-serif; */
+    /* font-family: "ClashDisplay-Medium", sans-serif; */
+    /* font-family: 'ClashDisplay-Semibold'; */
+    font-family: "Montserrat", sans-serif;
+}
+
+.study-card-view {
+    background: #1f2227;
+    padding: 1.2rem;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+}
+
+.about-me-section-image{
+    width: 5rem;
+    height: 5rem;
+    object-fit: scale-down;
+    background: #0f1215;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.study-section-details {
+    margin-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.date-year {
+    margin-left: auto;
+}
+
+/*--------------------------------------------------------------
+# Bakground color change Section
+--------------------------------------------------------------*/
 .panel {
-    /* min height incase content is higher than window height */
     min-height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: sans-serif;
-    /* outline: 10px solid hotpink; */
-    /* turn above on to see the edge of panels */
   }
   
   /* colours */
@@ -1196,6 +1273,12 @@ section {
     background-color: #0e0e0e;
   }
 
+  .color-white{
+    background-color: #ffffff;
+  }
+
+
+  
 
 /*--------------------------------------------------------------
 # Service Section
@@ -1265,7 +1348,7 @@ p.section-title.white-text-bg {
 .service .service-card {
     display: flex;
     flex-direction: column;
-    background-color: #363636;
+    background-color: #1f2227;
     padding: 3rem 1.5rem;
     border-radius: 10px;
     align-items: center;
@@ -1604,7 +1687,7 @@ i.fa-solid.fa-quote-right {
     position: fixed;
     height: 42px;
     width: 42px;
-    background-color: #636262;
+    background-color: #1f2227;
     right: 30px;
     bottom: 10px;
     display: flex;

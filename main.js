@@ -144,12 +144,12 @@ $('.scroll-up-btn').click(function(){
 /******************************************************************************
   Typing animation scrippts 
  ******************************************************************************/
- var typed = new Typed(".mybio", {
-    strings: ["Youtuber" , "Developer" , "Designer"],
-    typeSpeed : 100,
-    backSpeed : 60,
-    loop : true
-});
+//  var typed = new Typed(".mybio", {
+//     strings: ["Youtuber" , "Developer" , "Designer"],
+//     typeSpeed : 100,
+//     backSpeed : 60,
+//     loop : true
+// });
 
  
 /******************************************************************************
@@ -221,12 +221,26 @@ $('.scroll-up-btn').click(function(){
         opacity: 0,
         y: -50,
         ease: Expo.easeInOut
-    })
+    });
 
     TweenMax.from(".logo", 2, {
         delay: 0.5,
         opacity: 0,
         y: -50,
+        ease: Expo.easeInOut
+    });
+
+    TweenMax.from(".header-banner-text-1", 2, {
+        delay: 2.5,
+        opacity: 0,
+        x: -1000,
+        ease: Expo.easeInOut
+    });
+
+    TweenMax.from(".header-banner-text-2", 2, {
+        delay: 2.5,
+        opacity: 0,
+        x: 1000,
         ease: Expo.easeInOut
     })
 
