@@ -105,7 +105,7 @@ body{
 
 .header-banner-image{
     position: absolute;
-    z-index: 9999;
+    z-index: 999;
     bottom: 0rem;
     width: 35%;
     right: 32%;
@@ -133,7 +133,7 @@ body{
 
 .background-text {
     font-size: 12rem;
-    color: #6e7c8e;
+    color: #728db1de;
     position: relative;
     top: 3rem;
     cursor: default;
@@ -699,8 +699,9 @@ body{
 #stars3 {
     width: 3px;
     height: 3px;
+    border-radius: 50%;
     background: transparent;
-    animation: animStar 150s linear infinte;
+    animation: animStar 150s linear infinite;
     box-shadow: 387px 1878px #fff, 760px 1564px #fff, 1487px 999px #fff,
     948px 1828px #fff, 1977px 1001px #fff, 1284px 1963px #fff, 656px 284px #fff,
     1268px 1635px #fff, 1820px 598px #fff, 642px 1900px #fff, 296px 57px #fff,
@@ -1064,31 +1065,32 @@ section {
     color: white;
 }
 
-.about .about-img {
+.about-me-image-scale{
     width: 26rem;
     border-radius: 15px;
 	position: sticky;
 	top: 85px;
-    animation: aboutFade ease-in-out both;
-    animation-timeline: view();
-    animation-range: entry 0;
+    overflow: hidden;
 }
 
+.about .about-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    filter: grayscale(1);
+    transition: 0.8s ease-in-out;
+}
 
-@keyframes aboutFade{
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
+.about-me-image-scale:hover > .about-img {
+    /* scale: 1.15; */
+    transform: scale(1.05);
+    filter: grayscale(0);
+    transition: 0.8s ease-in-out;
 }
 
 .about .text {
-    font-size: 24px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -1136,78 +1138,9 @@ section {
     justify-content: center;
 }
 
-.portfolio-button {
-    margin-top: 2rem;
-}
 
-.portfolio-button a {
-    background-color: rgb(0, 0, 0);
-    border: 2px solid black;
-    padding: 10px 30px;
-    text-decoration: none;
-    color: white;
-    border-radius: 8px;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    transition: 0.9s;
-}
 
-.portfolio-button a:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    transition: 0.8s;
-}
 
-.about .top-title-month {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.about p.timeline-experience{
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-family: "Raleway", sans-serif;
-}
-
-.about .top-title-month p{
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: left;
-}
-
-.about ul.timeline {
-    list-style-type: none;
-    position: relative;
-}
-.about ul.timeline:before {
-    content: ' ';
-    background: #d4d9df;
-    display: inline-block;
-    position: absolute;
-    left: 29px;
-    width: 2px;
-    height: 100%;
-    z-index: 400;
-}
-.about ul.timeline > li {
-    margin: 20px 0;
-    padding-left: 20px;
-}
-.about ul.timeline > li:before {
-    content: ' ';
-    background: white;
-    display: inline-block;
-    position: absolute;
-    border-radius: 50%;
-    border: 3px solid #22c0e8;
-    left: 20px;
-    width: 20px;
-    height: 20px;
-    z-index: 400;
-}
 
 /* -----------------------------------------------------------------
 New about me section  
@@ -1221,6 +1154,7 @@ New about me section
     /* font-family: "ClashDisplay-Medium", sans-serif; */
     /* font-family: 'ClashDisplay-Semibold'; */
     font-family: "Montserrat", sans-serif;
+    margin-top: 5rem;
 }
 
 .study-card-view {
@@ -1248,7 +1182,162 @@ New about me section
 
 .date-year {
     margin-left: auto;
+    font-family: 'Poppins', sans-serif;
+    color: #7c858d;
+    font-weight: 500;
+    font-size: 1rem;
 }
+
+.category-name{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.category-position-name{
+    font-family: 'Poppins', sans-serif;
+    color: #7c858d;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.animation-button{
+    display: flex;
+  position: relative;
+  height: 74px;
+  width: 220px;
+  justify-content: center;
+  align-items: center;
+  background-color: #092571;
+  border-radius: 50px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.circle-animation-button{
+    font-size: 1.2rem;
+}
+
+
+
+  /*--------------------------------------------------------------
+# New service Section
+--------------------------------------------------------------*/
+section#service,
+#testimonial,
+#footer,
+#quotes {
+    background-color: #0e0e0e;
+}
+
+p.section-title.white-text-bg {
+    color: white;
+}
+
+.service .service-card-section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+}
+
+.service .grid-item-service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+   height: 100%;
+   overflow: hidden;
+   border-radius: 28px;
+}
+
+.service .grid-item-service img{
+    width: 100%;
+    border-radius: 28px;
+    height: 26rem;
+    object-fit: cover;
+    max-width: 100%;
+    transition: all 0.8s ease
+}
+
+.service .service-hover-text{
+    position: absolute;
+    background: rgba(28, 30, 32, .6);
+    color: #fff;
+    width: 90%;
+    bottom: 1rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-size: 26px;
+    z-index: 2;
+    padding: 1.2rem;
+    backdrop-filter: blur(12px);
+    border-radius: 19px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+/* font-family: "Montserrat", sans-serif; */
+    /* font-family: "Raleway", sans-serif; */
+    /* font-family: "Kanit", sans-serif; */
+
+.grid-item-service:hover > .service-hover-text {
+    opacity: 1
+ }
+
+ .grid-item-service:hover > img{
+    transform: scale(1.1)
+ }
+
+
+
+
+/*--------------------------------------------------------------
+# New skills Section
+--------------------------------------------------------------*/
+ .new-skills-section{
+    background-color: #0E0E0E;
+    height: auto;
+ }
+
+ .new-skills-section .text-part{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9rem;
+    color: white;
+    background-color: #00294e;
+    position: sticky;
+    top: 0;
+ }
+
+ .new-skills-section .image-part img{
+    width: 25rem;
+    border-radius: 12px;
+ } 
+
+ .new-skills-section .image-part .image-pro-slt{
+    position: relative;
+    top: 3rem;
+    left: 3rem;
+ }
+
+ .new-skills-section .image-part .image-pro-book{
+    position: relative;
+    top: 18rem;
+    left: 30rem;
+ }
+
+ .new-skills-section .image-part .image-pro-password{
+    position: relative;
+    top: 28rem;
+    right: 25rem;
+ }
+
+
 
 /*--------------------------------------------------------------
 # Bakground color change Section
@@ -1280,90 +1369,6 @@ New about me section
 
   
 
-/*--------------------------------------------------------------
-# Service Section
---------------------------------------------------------------*/
-section#service,
-#testimonial,
-#footer,
-#quotes {
-    background-color: #0e0e0e;
-}
-
-.service .service-card:hover {
-    cursor: pointer;
-}
-
-.service .service-card .icon {
-    margin: 0 auto;
-    width: 100%;
-    height: 80px;
-    max-width: 80px;
-    background: linear-gradient(90deg, #ff7e7e 0%, #ff4848 40%, rgba(0, 0, 0, 0.28) 60%);
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    transition: all 0.8s ease;
-    background-position: 0px;
-    background-size: 200px;
-    font-size: 2rem;
-}
-
-.service .service-card:hover .icon {
-    background-position: -120px;
-    transition: all 0.3s ease;
-}
-
-.service .service-card:hover .icon i {
-    background: linear-gradient(90deg, #FF7E7E, #FF4848);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
-    transition: all 0.3s ease;
-}
-
-p.section-title.white-text-bg {
-    color: white;
-}
-
-.service .service-card h4 {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-}
-
-.service .service-card p {
-    font-size: 18px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    color: #c3c3c3;
-}
-
-.service .service-card {
-    display: flex;
-    flex-direction: column;
-    background-color: #1f2227;
-    padding: 3rem 1.5rem;
-    border-radius: 10px;
-    align-items: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
-    border: 2px solid rgba(7, 7, 7, 0.12);
-    animation: aboutFade linear;
-    animation-timeline: view();
-    animation-range: entry 0;
-}
-
-/* service 02 */
-.service .service-tab-section .service-card-view h2{
-    font-size: 5rem;
-    line-height: 1;
-}
 
 
 /*--------------------------------------------------------------
@@ -1433,6 +1438,65 @@ p.section-title.white-text-bg {
 
 .skills .column-right .bars .sql::before {
     width: 60%;
+}
+
+
+
+/*--------------------------------------------------------------
+# Technology section 
+--------------------------------------------------------------*/
+img.slider-image {
+    width: 4rem;
+}
+
+
+.technology-stack .slider-technology{
+    -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+    overflow: hidden;
+}
+
+.slider-view-section{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+    white-space: nowrap;
+    animation-delay: calc(var(--t) * -1);
+    animation : scrollinganimate var(--t) linear infinite;
+}
+
+.slider-view-section:nth-child(2){
+    animation : scrollinganimate2 var(--t) linear infinite;
+    animation-delay: calc(var(--t) / -2);
+}
+
+@keyframes scrollinganimate
+{
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%
+    {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scrollinganimate2
+{
+    0%
+    {
+        transform: translateX(0%);
+    }
+    100%
+    {
+        transform: translateX(-200%);
+    }
+}
+
+.technology-stack .card-box-tech {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1.5rem;
+    border-radius: 50%;
 }
 
 

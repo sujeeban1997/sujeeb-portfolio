@@ -233,14 +233,14 @@ $('.scroll-up-btn').click(function(){
     TweenMax.from(".header-banner-text-1", 2, {
         delay: 2.5,
         opacity: 0,
-        x: -1000,
+        x: -10,
         ease: Expo.easeInOut
     });
 
     TweenMax.from(".header-banner-text-2", 2, {
         delay: 2.5,
         opacity: 0,
-        x: 1000,
+        x: 10,
         ease: Expo.easeInOut
     })
 
@@ -315,6 +315,10 @@ function createAnimation() {
 
 
 
+
+ /******************************************************************************
+  Background changing
+ ******************************************************************************/
     $(window).scroll(function() {
   
         // selectors
@@ -344,3 +348,89 @@ function createAnimation() {
         });    
         
       }).scroll();
+
+
+ /******************************************************************************
+  Magnetic Button animation
+ ******************************************************************************/
+  $('.animation-button').mouseleave(function(e){
+    TweenMax.to(this, 0.3, {height: 74, width: 220});
+    TweenMax.to('.circle-animation-button', 0.3, {scale: 1, x: 0, y: 0});
+    TweenMax.to(this, 0.3, {x: 0, y: 0});
+});
+
+$('.animation-button').mouseenter(function(e){
+    TweenMax.to(this, 0.3, {height: 74, width: 220});
+    TweenMax.to('.circle-animation-button', 0.3, {scale: 1.1});
+});
+
+$('.animation-button').mousemove(function(e){   
+    callParallax(e);
+});
+
+function callParallax(e){
+    parallaxIt(e, '.circle-animation-button', 50);
+    parallaxIt(e, '.animation-button', 80); // Set the same movement value for both
+}
+
+function parallaxIt(e, target, movement){
+    var $this = $('.animation-button');
+    var relX = e.pageX - $this.offset().left;
+    var relY = e.pageY - $this.offset().top;
+    
+    TweenMax.to(target, 0.3, {
+        x: (relX - $this.width() / 2) / $this.width() * movement,
+        y: (relY - $this.height() / 2) / $this.height() * movement,
+        ease: Power2.easeOut
+    });
+}
+
+
+
+
+
+
+/******************************************************************************
+  Cursor
+ ******************************************************************************/
+document.addEventListener('mousemove', function(e) {
+  $('.cursor').style.left = (e.pageX - 25) + 'px';
+  $('.cursor').style.top = (e.pageY - 25) + 'px';
+});
+
+
+
+
+
+
+
+    
+ /******************************************************************************
+  Header banner text left and right moving
+ ******************************************************************************/
+      gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".header-banner-text-2", {
+      x: 10000,
+      scrollTrigger: {
+        trigger: ".header",
+        start: "top top",
+        end: "bottom center",
+        scrub: 2.5
+      }
+    });
+
+    gsap.to(".header-banner-text-1", {
+        x: -10000,
+        scrollTrigger: {
+          trigger: ".header",
+          start: "top top",
+          end: "bottom center",
+          scrub: 2.5
+        }
+      });
+
+
+
+
+     
