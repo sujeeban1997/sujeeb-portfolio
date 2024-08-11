@@ -432,12 +432,14 @@ document.addEventListener('mousemove', function(e) {
 
 
 
-
+/******************************************************************************
+  Marque text section
+ ******************************************************************************/
       gsap.registerPlugin(ScrollTrigger);
 
       let direction = 1;
       
-      const duration = 8;
+      const duration = 18;
       const marquees = document.querySelectorAll(".marquee");
       const tl = gsap.timeline({
         repeat: -1,
@@ -472,3 +474,4 @@ document.addEventListener('mousemove', function(e) {
           gsap.to(tl, {timeScale: direction});  
         }
       });
+
