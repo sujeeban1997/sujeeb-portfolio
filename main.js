@@ -432,5 +432,46 @@ document.addEventListener('mousemove', function(e) {
 
 
 
+/******************************************************************************
+  Marque text section
+ ******************************************************************************/
+      gsap.registerPlugin(ScrollTrigger);
 
-     
+      let direction = 1;
+      
+      const duration = 18;
+      const marquees = document.querySelectorAll(".marquee");
+      const tl = gsap.timeline({
+        repeat: -1,
+        yoyo: false,
+          onReverseComplete() { 
+            this.totalTime(this.rawTime() + this.duration() * 10); // otherwise when the playhead gets back to the beginning, it'd stop. So push the playhead forward 10 iterations (it could be any number)
+          }
+      });
+      
+      marquees.forEach(marquee => {
+        // This works beacause all the elements inside the marquee wrapper are exactly the same
+        tl.to(marquee.querySelectorAll("span"), {
+          xPercent: marquee.dataset.reversed === "true" ? -100 : 100,
+          repeat: 0,
+          ease: "linear",
+          duration: duration
+        }, "<");
+      });
+      
+      
+      let scroll = ScrollTrigger.create({
+        onUpdate(self) {
+          // Update the direction of the animation based on the direction of scroll
+          if (self.direction !== direction) {
+            direction *= -1;
+          }
+          
+          // Update the animation speed (duration) based on the scroll speed
+          tl.timeScale(duration * self.getVelocity() / 500);
+          
+          // Go back to the default duration
+          gsap.to(tl, {timeScale: direction});  
+        }
+      });
+

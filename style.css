@@ -100,7 +100,7 @@ body{
     height: 100vh;
     overflow: hidden;
     /* background: radial-gradient(ellipse at bottom, #0e1d2f 0%, #000000 100%); */
-    background: linear-gradient(360deg, rgba(4, 3, 11, 1) 0%, rgb(12 41 68) 100%);
+    background: linear-gradient(360deg, rgba(4, 3, 11, 1) 0%, rgb(0 19 36) 100%);
 }
 
 .header-banner-image{
@@ -697,8 +697,8 @@ body{
 }
 
 #stars3 {
-    width: 3px;
-    height: 3px;
+    width: 1px;
+    height: 1px;
     border-radius: 50%;
     background: transparent;
     animation: animStar 150s linear infinite;
@@ -734,8 +734,8 @@ body{
     content: '';
     position: absolute;
     top: 2000px;
-    width: 3px;
-    height: 3px;
+    width: 1px;
+    height: 1px;
     background: transparent;
     box-shadow: 387px 1878px #fff, 760px 1564px #fff, 1487px 999px #fff,
     948px 1828px #fff, 1977px 1001px #fff, 1284px 1963px #fff, 656px 284px #fff,
@@ -822,8 +822,8 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark{
     height: 3.4rem;
     transition: 0.3s;
     backdrop-filter: blur(20px);
-    background: rgb(31 34 39 / 61%);
-    border: 1px solid #1f2227;
+    background: rgb(17 17 17 / 40%);
+    border: 1px solid #4949498f;
 }
 
 .navbar .logo a {
@@ -1138,6 +1138,10 @@ section {
     justify-content: center;
 }
 
+.sujee-signature{
+    width: 10rem;
+}
+
 
 
 
@@ -1209,7 +1213,7 @@ New about me section
   width: 220px;
   justify-content: center;
   align-items: center;
-  background-color: #092571;
+  border: 1px solid white;
   border-radius: 50px;
   margin-top: 2rem;
   cursor: pointer;
@@ -1227,7 +1231,8 @@ New about me section
 section#service,
 #testimonial,
 #footer,
-#quotes {
+#quotes,
+#skills {
     background-color: #0e0e0e;
 }
 
@@ -1309,40 +1314,101 @@ p.section-title.white-text-bg {
     align-items: center;
     font-size: 9rem;
     color: white;
-    background-color: #00294e;
     position: sticky;
     top: 0;
  }
 
+ .new-skills-section .image-part-1{
+    height: 500vh;
+    position: relative;
+ }
+
+ .image-part img:nth-child(1) {
+    position: absolute;
+    top: 8%;
+    left: 5%;
+}
+
+.image-part img:nth-child(2) {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+
+.image-part img:nth-child(3) {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+}
+
+.image-part img:nth-child(4) {
+    position: absolute;
+    bottom: 6%;
+    right: 12%;
+}
+
+.image-part img:nth-child(5) {
+    position: absolute;
+    bottom: 18%;
+    left: 6%;
+}
+
+.image-part img:nth-child(6) {
+    position: absolute;
+    top: 58%;
+    right: 4%;
+}
+
+.image-part img:nth-child(7) {
+    position: absolute;
+    bottom: 48%;
+    right: 8%;
+}
+
+.image-part img:nth-child(8) {
+    position: absolute;
+    top: 32%;
+    right: 50%;
+}
+
  .new-skills-section .image-part img{
-    width: 25rem;
+    width: 34rem;
     border-radius: 12px;
+    
  } 
 
- .new-skills-section .image-part .image-pro-slt{
-    position: relative;
-    top: 3rem;
-    left: 3rem;
- }
 
- .new-skills-section .image-part .image-pro-book{
-    position: relative;
-    top: 18rem;
-    left: 30rem;
- }
 
- .new-skills-section .image-part .image-pro-password{
-    position: relative;
-    top: 28rem;
-    right: 25rem;
- }
+/*--------------------------------------------------------------
+# Marque text section Section
+--------------------------------------------------------------*/
+ .marquee {
+    display: flex;
+    padding: 15px 0;
+    white-space: nowrap;
+    color: #DDD;
+    justify-content: flex-end;
+    background: #0e0e0e;
+  }
+  
+  .marquee[data-reversed="true"] {
+    justify-content: flex-start;
+  }
+  
+  .marquee span {
+    display: block;
+    padding: 0 1ch;
+    font-size: 8rem;
+  }
+  
+
 
 
 
 /*--------------------------------------------------------------
 # Bakground color change Section
 --------------------------------------------------------------*/
-.panel {
+/* .panel {
     min-height: 100vh;
     display: flex;
     justify-content: space-around;
@@ -1350,12 +1416,11 @@ p.section-title.white-text-bg {
     font-family: sans-serif;
   }
   
-  /* colours */
   .color-violet {
-    background-color: #7A4EAB;
+    background-color: #4B3306;
   }
   .color-indigo {
-    background-color: #4332CF;
+    background-color: #00294E;
   }
 
   .color-black{
@@ -1364,7 +1429,7 @@ p.section-title.white-text-bg {
 
   .color-white{
     background-color: #ffffff;
-  }
+  } */
 
 
   
@@ -1374,11 +1439,16 @@ p.section-title.white-text-bg {
 /*--------------------------------------------------------------
 # Skills  Section
 --------------------------------------------------------------*/
+.skills .section-title{
+    color: white;
+}
+
 .skills .column-left .text-heading {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 2rem;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .skills .column-left p {
@@ -1386,118 +1456,25 @@ p.section-title.white-text-bg {
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     padding-right: 2rem;
+    color: #cfcfcf;
+    font-weight: 400;
+    margin-bottom: 4rem;
 }
 
-.skills .column-right .bars {
-    margin-bottom: 15px;
+.skills .column-left .skills-gallery img{
+    width: 10rem;
+    background: #1f2227;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    margin: auto;
 }
 
-.skills .column-right .bars .info {
+.skills .column-left .skills-gallery {
     display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.skills .column-right .bars span {
-    font-weight: 500;
-    font-size: 18px;
-}
-
-.skills .column-right .bars .line {
-    height: 5px;
-    width: 100%;
-    background: lightgray;
-    position: relative;
-}
-
-.skills .column-right .bars .line::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgb(0, 0, 0);
-}
-
-.skills .column-right .bars .html::before {
-    width: 90%;
-}
-
-.skills .column-right .bars .css::before {
-    width: 80%;
-}
-
-.skills .column-right .bars .js::before {
-    width: 60%;
-}
-
-.skills .column-right .bars .php::before {
-    width: 50%;
-}
-
-.skills .column-right .bars .sql::before {
-    width: 60%;
-}
-
-
-
-/*--------------------------------------------------------------
-# Technology section 
---------------------------------------------------------------*/
-img.slider-image {
-    width: 4rem;
-}
-
-
-.technology-stack .slider-technology{
-    -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
-    overflow: hidden;
-}
-
-.slider-view-section{
-    display: flex;
-    gap: 2rem;
-    padding: 2rem 0;
-    white-space: nowrap;
-    animation-delay: calc(var(--t) * -1);
-    animation : scrollinganimate var(--t) linear infinite;
-}
-
-.slider-view-section:nth-child(2){
-    animation : scrollinganimate2 var(--t) linear infinite;
-    animation-delay: calc(var(--t) / -2);
-}
-
-@keyframes scrollinganimate
-{
-    0%
-    {
-        transform: translateX(100%);
-    }
-    100%
-    {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes scrollinganimate2
-{
-    0%
-    {
-        transform: translateX(0%);
-    }
-    100%
-    {
-        transform: translateX(-200%);
-    }
-}
-
-.technology-stack .card-box-tech {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 1.5rem;
-    border-radius: 50%;
-}
 
 
 
