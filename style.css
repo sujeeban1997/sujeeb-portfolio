@@ -100,7 +100,8 @@ body{
     height: 100vh;
     overflow: hidden;
     /* background: radial-gradient(ellipse at bottom, #0e1d2f 0%, #000000 100%); */
-    background: linear-gradient(360deg, rgba(4, 3, 11, 1) 0%, rgb(0 19 36) 100%);
+    /* background: linear-gradient(360deg, rgba(4, 3, 11, 1) 0%, rgb(0 19 36) 100%); */
+    background: linear-gradient(360deg, rgb(65 65 66) 0%, rgb(10 10 41) 100%);
 }
 
 .header-banner-image{
@@ -109,6 +110,7 @@ body{
     bottom: 0rem;
     width: 35%;
     right: 32%;
+    display: none;
 }
 
 @font-face {
@@ -132,10 +134,10 @@ body{
   }
 
 .background-text {
-    font-size: 12rem;
-    color: #728db1de;
+    font-size: 8rem;
+    color: #baccec;
     position: relative;
-    top: 3rem;
+    top: 5rem;
     cursor: default;
     font-family: 'Masiku', sans-serif;
 }
@@ -777,7 +779,14 @@ body{
 
 
 
-
+.bg-mountain {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* height: 15rem; */
+    object-fit: cover;
+    margin-bottom: -5rem;
+}
 
 
 
@@ -1209,18 +1218,28 @@ New about me section
 .animation-button{
     display: flex;
   position: relative;
-  height: 74px;
-  width: 220px;
+  height: 4.5rem;
+  width: 225px;
   justify-content: center;
   align-items: center;
   border: 1px solid white;
   border-radius: 50px;
   margin-top: 2rem;
   cursor: pointer;
+  color: white;
+  text-decoration: none !important;
 }
 
 .circle-animation-button{
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.animation-button:hover{
+    font-size: 1.2rem;
+    color: white;
 }
 
 
@@ -1619,16 +1638,20 @@ i.fa-solid.fa-quote-right {
 # Contact  Section
 --------------------------------------------------------------*/
 .contact {
-    background-color: #dcdcdc;
+    background-color: #0e0e0e;
 }
 
 .contact .contact-form {
-    background-color: white;
+    background-color: #1F2227;
     padding: 5rem !important;
+    color: white;
 }
 
 .contact .contact-form .form-control {
     border-radius: 0 !important;
+    color: #b4b4b4;
+    background-color: #1f2227;
+    border: 1px solid #707070;
 }
 
 .contact .contact-form h4 {
@@ -1650,11 +1673,10 @@ i.fa-solid.fa-quote-right {
 }
 
 .contact .contact-form .portfolio-button .btn {
-    background: black;
     color: white;
     padding: 10px 30px;
     font-weight: 400;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(220 220 220);
     font-family: 'Poppins';
     transition: 0.8s;
 }

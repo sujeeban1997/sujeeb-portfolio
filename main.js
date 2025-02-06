@@ -354,14 +354,14 @@ function createAnimation() {
   Magnetic Button animation
  ******************************************************************************/
   $('.animation-button').mouseleave(function(e){
-    TweenMax.to(this, 0.3, {height: 74, width: 220});
+    TweenMax.to(this, 0.3, {height: 72, width: 225});
     TweenMax.to('.circle-animation-button', 0.3, {scale: 1, x: 0, y: 0});
     TweenMax.to(this, 0.3, {x: 0, y: 0});
 });
 
 $('.animation-button').mouseenter(function(e){
-    TweenMax.to(this, 0.3, {height: 74, width: 220});
-    TweenMax.to('.circle-animation-button', 0.3, {scale: 1.1});
+    TweenMax.to(this, 0.8, {height: 72, width: 225});
+    TweenMax.to('.circle-animation-button', 1.3, {scale: 1.1});
 });
 
 $('.animation-button').mousemove(function(e){   
@@ -369,8 +369,8 @@ $('.animation-button').mousemove(function(e){
 });
 
 function callParallax(e){
-    parallaxIt(e, '.circle-animation-button', 50);
-    parallaxIt(e, '.animation-button', 80); // Set the same movement value for both
+    parallaxIt(e, '.circle-animation-button', 20);
+    parallaxIt(e, '.animation-button', 180); // Set the same movement value for both
 }
 
 function parallaxIt(e, target, movement){
@@ -378,7 +378,7 @@ function parallaxIt(e, target, movement){
     var relX = e.pageX - $this.offset().left;
     var relY = e.pageY - $this.offset().top;
     
-    TweenMax.to(target, 0.3, {
+    TweenMax.to(target, 0.2, {
         x: (relX - $this.width() / 2) / $this.width() * movement,
         y: (relY - $this.height() / 2) / $this.height() * movement,
         ease: Power2.easeOut
@@ -430,7 +430,15 @@ document.addEventListener('mousemove', function(e) {
         }
       });
 
-
+      gsap.to(".bg-mountain", {
+        y: 10000,
+        scrollTrigger: {
+          trigger: ".xxx",
+          start: "top top",
+          end: "bottom center",
+          scrub: 2
+        }
+      });
 
 /******************************************************************************
   Marque text section
@@ -468,10 +476,12 @@ document.addEventListener('mousemove', function(e) {
           }
           
           // Update the animation speed (duration) based on the scroll speed
-          tl.timeScale(duration * self.getVelocity() / 500);
+          tl.timeScale(duration * self.getVelocity() / 5000);
           
           // Go back to the default duration
           gsap.to(tl, {timeScale: direction});  
         }
       });
+
+
 
