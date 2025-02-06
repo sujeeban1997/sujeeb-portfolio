@@ -1331,7 +1331,6 @@ p.section-title.white-text-bg {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 9rem;
     color: white;
     position: sticky;
     top: 0;
@@ -1900,6 +1899,35 @@ i.fa-solid.fa-quote-right {
     }
 
     .about .column-right p {
-        font-size: 16px;
+        font-size: 18px !important;
+    }
+
+    .background-text {
+        font-size: 3rem;
+    }
+
+    .new-skills-section .image-part img {
+        width: 14rem;
+    }
+
+    .marquee span {
+        font-size: 3rem;
+      }
+
+      nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.sticky{
+        top: 1%;
+        left: 0%;
+        right: 0%;
+    }
+
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark {
+        top: 1%;
+        left: 0%;
+        right: 0%;
+    }
+
+    #titleee {
+        top: 29%;
+        margin-top: 0;
     }
 }
