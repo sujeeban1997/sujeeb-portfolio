@@ -1924,10 +1924,20 @@ i.fa-solid.fa-quote-right {
         top: 1%;
         left: 0%;
         right: 0%;
+        width: 100%;
     }
 
     #titleee {
         top: 29%;
         margin-top: 0;
+    }
+
+    .marquee {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .about-me-image-scale {
+        width: 100%;
     }
 }
