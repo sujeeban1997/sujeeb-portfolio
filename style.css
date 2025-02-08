@@ -1959,4 +1959,8 @@ i.fa-solid.fa-quote-right {
         width: 100vw;
         height: 100vh;
     } 
+
+    .service .service-hover-text {
+        opacity: 1;
+    }
 }
