@@ -484,4 +484,16 @@ document.addEventListener('mousemove', function(e) {
       });
 
 
-
+      document.addEventListener("DOMContentLoaded", function () {
+        let navLinks = document.querySelectorAll(".nav-link");
+        let offcanvasNavbar = document.getElementById("offcanvasNavbar");
+    
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            let offcanvas = bootstrap.Offcanvas.getInstance(offcanvasNavbar);
+            if (offcanvas) {
+              offcanvas.hide(); // Close the offcanvas when clicking a menu item
+            }
+          });
+        });
+      });
