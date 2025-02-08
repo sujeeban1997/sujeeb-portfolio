@@ -115,10 +115,11 @@ body{
 
 @font-face {
     font-family: 'Masiku';
-    src: 
-         url('/fonts/Masiku.woff2') format('woff2'),
+    src: url('/fonts/Masiku.woff2') format('woff2'),
          url('/fonts/Masiku.woff') format('woff'),
-         url('/fonts/Masiku.ttf') format('truetype');
+         url('/fonts/Masiku.ttf') format('truetype'),
+         url('/fonts/Masiku.otf') format('otf'),
+         url('fonts/Masiku.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
