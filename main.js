@@ -484,6 +484,8 @@ document.addEventListener('mousemove', function(e) {
       });
 
 
+
+      //Side navigation baar hiding when clicking
       document.addEventListener("DOMContentLoaded", function () {
         let navLinks = document.querySelectorAll(".nav-link");
         let offcanvasNavbar = document.getElementById("offcanvasNavbar");
