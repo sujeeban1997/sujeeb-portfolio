@@ -368,8 +368,6 @@
       </div>
 
 
-                   
-
       <!-- ==================================================================================
                      Testimonial Section 
                      ================================================================================= -->
@@ -580,25 +578,28 @@
                               <p class="section-title animation-section-sm">Contact Me</p>
                               <h4 class="animation-section-sm">Let's make something awesome together!</h4>
                               <p class="animation-section-sm">Thanks for taking the time to look over my portfolio. Let's chat!</p>
-                              <div class="row animation-section-sm">
-                                    <div class="col-md-12 col-lg-6 mb-3">
-                                          <label for="exampleFormControlInput1" class="form-label">Name</label>
-                                          <input type="text" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="John">
+                              <form action="https://api.web3forms.com/submit" method="POST">
+                                    <input type="hidden" name="access_key" value="56045207-2bda-4fdf-8777-c8a12000542f">
+                                    <div class="row animation-section-sm">
+                                          <div class="col-md-12 col-lg-6 mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                      placeholder="John">
+                                          </div>
+                                          <div class="col-md-12 col-lg-6 mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                                      placeholder="name@example.com">
+                                          </div>
                                     </div>
-                                    <div class="col-md-12 col-lg-6 mb-3">
-                                          <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                                          <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                placeholder="name@example.com">
+                                    <div class="mb-3 animation-section-sm">
+                                          <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     </div>
-                              </div>
-                              <div class="mb-3 animation-section-sm">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                              </div>
-                              <div class="portfolio-button animation-section-sm">
-                                    <button type="submit" class="btn">Submit</button>
-                              </div>
+                                    <div class="portfolio-button animation-section-sm">
+                                          <button type="submit" class="btn">Submit</button>
+                                    </div>
+                              </form>
                         </div>
                   </div>
             </div>
