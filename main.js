@@ -179,12 +179,12 @@ $('.scroll-up-btn').click(function(){
 /******************************************************************************
   Background Water ripple section 
  ******************************************************************************/
-      $(document).ready(function(){
-	    $(".bg-image").ripples({
-        resolution: 200,
-        perturbance: .04,
-    });
-    });
+    //   $(document).ready(function(){
+	  //   $(".bg-image").ripples({
+    //     resolution: 200,
+    //     perturbance: .04,
+    // });
+    // });
 
 
 /******************************************************************************
