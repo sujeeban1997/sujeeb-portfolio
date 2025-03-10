@@ -223,6 +223,13 @@ $('.scroll-up-btn').click(function(){
         ease: Expo.easeInOut
     });
 
+    TweenMax.from(".landing-page-hey-im", 2, {
+      delay: 1.8,
+      opacity: 0,
+      y: -50,
+      ease: Expo.easeInOut
+  });
+
     TweenMax.from(".logo", 2, {
         delay: 0.5,
         opacity: 0,
@@ -233,14 +240,14 @@ $('.scroll-up-btn').click(function(){
     TweenMax.from(".header-banner-text-1", 2, {
         delay: 2.5,
         opacity: 0,
-        x: -10,
+        x: -350,
         ease: Expo.easeInOut
     });
 
     TweenMax.from(".header-banner-text-2", 2, {
         delay: 2.5,
         opacity: 0,
-        x: 10,
+        x: 350,
         ease: Expo.easeInOut
     })
 
