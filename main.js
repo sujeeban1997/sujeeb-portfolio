@@ -240,14 +240,14 @@ $('.scroll-up-btn').click(function(){
     TweenMax.from(".header-banner-text-1", 2, {
         delay: 2.5,
         opacity: 0,
-        x: -350,
+        x: -10,
         ease: Expo.easeInOut
     });
 
     TweenMax.from(".header-banner-text-2", 2, {
         delay: 2.5,
         opacity: 0,
-        x: 350,
+        x: 10,
         ease: Expo.easeInOut
     })
 
