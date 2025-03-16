@@ -115,7 +115,6 @@ gsap.to(".h1", 1.5, {
 
 
 
-
 /******************************************************************************
   Navbar add class function
  ******************************************************************************/
@@ -280,7 +279,7 @@ function createAnimation() {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-text-reveal",
-      start: "top 40%",
+      start: "top 50%",
       end: "top 10%",
       scrub: 1,
       toggleActions: 'play play reverse reverse'
@@ -289,7 +288,7 @@ function createAnimation() {
 
   tl.to(allMasks, {
     width: "0%",
-    duration: 0.5,
+    duration: 1.0,
     stagger: 0.5
   });
 }
@@ -314,7 +313,7 @@ function createAnimation() {
     text.innerHTML = text.innerText
 	.split("")
 	.map(
-		(char, i) => `<span style="transform:rotate(${i * 10.3}deg)">${char}</span>`
+		(char, i) => `<span style="transform:rotate(${i * 10.0}deg)">${char}</span>`
 	)
 	.join("");
 
@@ -454,7 +453,7 @@ document.addEventListener('mousemove', function(e) {
 
       let direction = 1;
       
-      const duration = 18;
+      const duration = 50;
       const marquees = document.querySelectorAll(".marquee");
       const tl = gsap.timeline({
         repeat: -1,
@@ -483,7 +482,7 @@ document.addEventListener('mousemove', function(e) {
           }
           
           // Update the animation speed (duration) based on the scroll speed
-          tl.timeScale(duration * self.getVelocity() / 5000);
+          tl.timeScale(duration * self.getVelocity() / 8000);
           
           // Go back to the default duration
           gsap.to(tl, {timeScale: direction});  
