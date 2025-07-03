@@ -1902,7 +1902,7 @@ i.fa-solid.fa-quote-right {
 
     .hero-title-right {
         font-weight: 500;
-        bottom: 34%;
+        bottom: 31%;
         font-size: 3rem;
         right: 1rem;
     }
@@ -1912,11 +1912,12 @@ i.fa-solid.fa-quote-right {
         width: 164%;
         right: -17rem;
     }
+    
 
     .hero-title-right-2 {
         -webkit-text-stroke-width: 1px;
         font-weight: 500;
-        bottom: 34%;
+        bottom: 31%;
         font-size: 3rem;
         right: 1rem;
     }
