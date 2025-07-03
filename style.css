@@ -1089,7 +1089,7 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark{
     bottom: -11rem;
     width: 50%;
     right: 14rem;
-    /* filter: blur(4px); */
+    filter: blur(2px);
 }
 
 .hero .hero-subtitle {
@@ -1902,7 +1902,7 @@ i.fa-solid.fa-quote-right {
 
     .hero-title-right {
         font-weight: 500;
-        bottom: 31%;
+        bottom: 34%;
         font-size: 3rem;
         right: 1rem;
     }
@@ -1916,7 +1916,7 @@ i.fa-solid.fa-quote-right {
     .hero-title-right-2 {
         -webkit-text-stroke-width: 1px;
         font-weight: 500;
-        bottom: 31%;
+        bottom: 34%;
         font-size: 3rem;
         right: 1rem;
     }
@@ -2020,7 +2020,7 @@ i.fa-solid.fa-quote-right {
     }
 
     .hero .hero-subtitle-hi {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 400;
     }
 
@@ -2051,3 +2051,32 @@ i.fa-solid.fa-quote-right {
         opacity: 1;
     }
 }
+
+
+@media only screen and (min-width: 1710px) and (max-width: 1920px) {
+    .my-image-center {
+    bottom: -6rem;
+    width: 60%;
+    right: 4rem;
+    filter: blur(2px);
+}
+
+.hero .hero-title {
+    font-size: 9rem;
+}
+
+.hero-title-right-2 {
+    bottom: 11%;
+    font-size: 9rem;
+}
+
+.hero-title-right {
+    bottom: 11%;
+    font-size: 9rem;
+}
+}
+ 
+@media only screen and (min-width: 920px) and (max-width: 1700px) {
+
+}
+ 
